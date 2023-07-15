@@ -9,18 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import cl.gencina.recyclerviewdetalle.databinding.FragmentRvBinding;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link RvFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class RvFragment extends Fragment {
     FragmentRvBinding binding;
-    List<Item> data = new ArrayList<>();
+    ArrayList<Item> data = new ArrayList<>();
     RvAdapter infoAdapter = new RvAdapter();
 
     private static final String ARG_PARAM1 = "param1";
@@ -65,7 +59,7 @@ public class RvFragment extends Fragment {
         binding.rvData.setAdapter(infoAdapter);
     }
 
-    public List<Item> createData(){
+    public ArrayList<Item> createData(){
             data.add(new Item("foto1", "https://images.unsplash.com/photo-1577741314755-048d8525d31e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"));
             data.add(new Item("foto2", "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"));
             data.add(new Item("foto3", "https://images.unsplash.com/photo-1588699219474-fce022b9f633?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80"));

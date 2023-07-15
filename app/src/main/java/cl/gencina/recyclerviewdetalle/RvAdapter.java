@@ -4,22 +4,16 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
-
 import androidx.annotation.NonNull;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
-import com.google.android.material.internal.ContextUtils;
-
 import java.util.List;
-
 import cl.gencina.recyclerviewdetalle.databinding.ItemBinding;
 
 public class RvAdapter extends RecyclerView.Adapter<RvAdapter.MyViewHolder> {
     private List<Item> data;
     private Context context;
-
     public void setInfo(List<Item> data){
         this.data = data;
     }
@@ -49,7 +43,6 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.MyViewHolder> {
             this.binding = binding;
 
         }
-
         public void bind(Item info){
             Glide.with(context)
                     .load(info.getImagen())
@@ -62,6 +55,5 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.MyViewHolder> {
                 Navigation.findNavController(binding.getRoot()).navigate(R.id.action_rvFragment_to_detalleFragment,bundle);
             });
         }
-
     }
 }
